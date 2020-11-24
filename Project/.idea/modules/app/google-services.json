@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "738706350742",
+    "firebase_url": "https://project-ffaaf.firebaseio.com",
+    "project_id": "project-ffaaf",
+    "storage_bucket": "project-ffaaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738706350742:android:a8058504ef7c1cddc198b7",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738706350742-fd6nq7iiok50dh6qsh5dcv4tsh3rhn0q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project",
+            "certificate_hash": "79f4b99bee6888f7797a343666229f40b0f89b53"
+          }
+        },
+        {
+          "client_id": "738706350742-4d58cvgcf54obv13t4fr8bh98bfnmr21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsXY5FK5ED8p_qgBGHorPZGN9B4o51Rvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738706350742-4d58cvgcf54obv13t4fr8bh98bfnmr21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
