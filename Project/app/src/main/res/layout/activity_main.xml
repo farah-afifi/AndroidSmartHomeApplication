@@ -18,10 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
 
+        android:fontFamily="@font/armata"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="#FFFFFF" />
@@ -31,13 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="84dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
+        android:fontFamily="@font/armata"
         android:hint="Password"
         android:inputType="numberPassword"
         android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"/>
+        android:textColorHint="#FFFFFF" />
 
     <Button
         android:id="@+id/SignInBTN"
@@ -45,9 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="84dp"
+        android:layout_marginRight="20dp"
         android:background="#00BCD4"
+        android:fontFamily="@font/armata"
         android:onClick="SignInCLK"
         android:text="Sign in"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -68,9 +71,10 @@
             android:id="@+id/TV1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/armata"
             android:text="Dont have an account?"
             android:textColor="#020202"
             android:textSize="18sp" />
@@ -83,8 +87,9 @@
             android:layout_marginRight="20dp"
             android:layout_weight="0"
 
-            android:onClick="SignUpCLK"
+            android:fontFamily="@font/armata"
 
+            android:onClick="SignUpCLK"
             android:text="Sign up"
             android:textColor="#000000"
             android:textSize="18sp" />
