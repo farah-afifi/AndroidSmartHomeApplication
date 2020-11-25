@@ -54,7 +54,7 @@
         android:fontFamily="@font/comfortaa_light"
         android:gravity="right"
         android:includeFontPadding="false"
-        android:onClick="SignUpCLK"
+        android:onClick="ForgetPassword"
         android:text="Forgot Password?"
         android:textColor="#000000"
         android:textSize="12sp"
