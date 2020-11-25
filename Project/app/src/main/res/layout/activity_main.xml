@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="left"
     android:background="@drawable/gradient"
-    android:hapticFeedbackEnabled="false"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:hapticFeedbackEnabled="false"
 
+    android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/EmailSignIn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -22,7 +23,7 @@
         android:layout_marginRight="20dp"
         android:ems="10"
 
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/comfortaa_light"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="#FFFFFF" />
@@ -35,11 +36,26 @@
         android:layout_marginTop="84dp"
         android:layout_marginRight="20dp"
         android:ems="10"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/comfortaa_light"
         android:hint="Password"
-        android:inputType="numberPassword"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/ForgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0"
+        android:fontFamily="@font/comfortaa_light"
+        android:includeFontPadding="false"
+        android:gravity="right"
+        android:onClick="SignUpCLK"
+        android:text="Forgot Password?"
+        android:textColor="#000000"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/SignInBTN"
@@ -50,7 +66,7 @@
         android:layout_marginTop="84dp"
         android:layout_marginRight="20dp"
         android:background="#00BCD4"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/comfortaa_light"
         android:onClick="SignInCLK"
         android:text="Sign in"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -62,8 +78,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_marginTop="25dp"
+        android:orientation="horizontal"
 
         >
 
@@ -74,22 +90,23 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:fontFamily="@font/armata"
+            android:fontFamily="@font/comfortaa_light"
             android:text="Dont have an account?"
             android:textColor="#020202"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/SignUpBTN"
+            android:id="@+id/SignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="0"
 
-            android:fontFamily="@font/armata"
+            android:fontFamily="@font/comfortaa_light"
 
-            android:onClick="SignUpCLK"
+            android:includeFontPadding="false"
+            android:onClick="SignUp"
             android:text="Sign up"
             android:textColor="#000000"
             android:textSize="18sp" />
