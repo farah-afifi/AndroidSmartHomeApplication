@@ -26,7 +26,8 @@
         android:fontFamily="@font/comfortaa_light"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#FFFFFF" />
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Password"
@@ -39,7 +40,8 @@
         android:fontFamily="@font/comfortaa_light"
         android:hint="Password"
         android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF" />
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/ForgetPassword"
@@ -50,12 +52,13 @@
         android:layout_marginRight="20dp"
         android:layout_weight="0"
         android:fontFamily="@font/comfortaa_light"
-        android:includeFontPadding="false"
         android:gravity="right"
+        android:includeFontPadding="false"
         android:onClick="SignUpCLK"
         android:text="Forgot Password?"
         android:textColor="#000000"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/SignInBTN"
@@ -73,7 +76,8 @@
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorLink="#FFFFFF"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,7 +97,8 @@
             android:fontFamily="@font/comfortaa_light"
             android:text="Dont have an account?"
             android:textColor="#020202"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/SignUp"
@@ -109,7 +114,8 @@
             android:onClick="SignUp"
             android:text="Sign up"
             android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
