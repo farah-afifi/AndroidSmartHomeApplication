@@ -2,6 +2,7 @@ package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.SignInMethodQueryResult;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -44,6 +46,7 @@ public class SignUp extends AppCompatActivity {
         Password2 = (EditText) findViewById(R.id.Password2);
         SignUp = (Button) findViewById(R.id.SignUpBTN);
     }
+
     FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
         @Override
         public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -51,13 +54,13 @@ public class SignUp extends AppCompatActivity {
 
         }
     };
+
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser != null)
-        {
+        if (currentUser != null) {
             //TODO go to main page since user is already signed in
         }
     }
@@ -71,13 +74,6 @@ public class SignUp extends AppCompatActivity {
         Pattern pattern = Pattern.compile(regex);
 
         Matcher matcher = pattern.matcher(email);
-        if (!matcher.matches()) {
-            Toast.makeText(this, "Please enter a correct email", Toast.LENGTH_LONG).show();
-        } else if (!pass.equals(pass2)) {
-            Toast.makeText(this, "Passwords don't match! Please re-enter the password", Toast.LENGTH_LONG).show();
-        } else if(TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(),"Please enter your E-mail address",Toast.LENGTH_LONG).show();
-        }
         if(TextUtils.isEmpty(pass)){
             Toast.makeText(getApplicationContext(),"Please enter your Password",Toast.LENGTH_LONG).show();
         }
@@ -87,9 +83,15 @@ public class SignUp extends AppCompatActivity {
         if (pass.length()<8){
             Toast.makeText(getApplicationContext(),"Password must be more than 8 digit",Toast.LENGTH_LONG).show();
         }
-        else {
+        if (!matcher.matches()) {
+            Toast.makeText(this, "Please enter a correct email", Toast.LENGTH_LONG).show();
+        } else if (!pass.equals(pass2)) {
+            Toast.makeText(this, "Passwords don't match! Please re-enter the password", Toast.LENGTH_LONG).show();
+        } else if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Please enter your E-mail address", Toast.LENGTH_LONG).show();
+        } else {
             Toast.makeText(this, "An email has been sent to this email, Please confirm it", Toast.LENGTH_LONG).show();
-            createAccount(email,pass);
+            createAccount(email, pass);
         }
 
     }
@@ -106,11 +108,9 @@ public class SignUp extends AppCompatActivity {
                             finish();
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(SignUp.this, "Authentication failed.",
+                            Toast.makeText(SignUp.this, "This email is already registere with another account,please try another email.",
                                     Toast.LENGTH_SHORT).show();
                         }
-
-                        // ...
                     }
                 });
     }

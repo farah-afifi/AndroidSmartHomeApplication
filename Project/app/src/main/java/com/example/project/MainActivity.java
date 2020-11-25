@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText Password1;
     private Button SignIn;
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +58,6 @@ public class MainActivity extends AppCompatActivity {
         {
             //TODO go to main page since user is already signed in
         }
-    }
-
-    public void SignUp(View view){
-        Intent intent  = new Intent(this,SignUp.class);
-        startActivity(intent);
     }
 
     public void SignInCLK(View view) {
@@ -112,5 +106,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void ForgetPassword(View view) {
+        Intent intent  = new Intent(this,forgetPassword.class);
+        startActivity(intent);
+    }
+    public void SignUp(View view){
+        Intent intent  = new Intent(this,SignUp.class);
+        startActivity(intent);
     }
 }
