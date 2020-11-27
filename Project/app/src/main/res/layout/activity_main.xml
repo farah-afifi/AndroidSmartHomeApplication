@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="left"
-    android:background="@drawable/gradient"
+    android:background="@drawable/download"
     android:gravity="center_horizontal"
     android:hapticFeedbackEnabled="false"
 
@@ -26,7 +26,7 @@
         android:fontFamily="@font/comfortaa_light"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#0D0C0C"
         android:textStyle="bold" />
 
     <EditText
@@ -39,8 +39,9 @@
         android:ems="10"
         android:fontFamily="@font/comfortaa_light"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#000000"
         android:textStyle="bold" />
 
     <TextView
