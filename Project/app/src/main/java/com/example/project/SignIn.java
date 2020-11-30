@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -15,14 +14,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class MainActivity extends AppCompatActivity {
+public class SignIn extends AppCompatActivity {
 
     private EditText Email;
     private EditText Password1;
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.SignIn);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -94,13 +92,13 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(null, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(MainActivity.this, "Success.",
+                            Toast.makeText(com.example.project.SignIn.this, "Success.",
                                     Toast.LENGTH_SHORT).show();
                             //TODO go to main page
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(null, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "The email or password you entered is incorrect.",
+                            Toast.makeText(com.example.project.SignIn.this, "The email or password you entered is incorrect.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
