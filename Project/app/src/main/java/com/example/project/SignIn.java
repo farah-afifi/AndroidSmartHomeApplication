@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class SignIn extends AppCompatActivity {
+public class signIn extends AppCompatActivity {
 
     private EditText Email;
     private EditText Password1;
@@ -30,7 +30,7 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.SignIn);
+        setContentView(R.layout.sign_in);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -92,13 +92,15 @@ public class SignIn extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(null, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(com.example.project.SignIn.this, "Success.",
+                            Toast.makeText(com.example.project.signIn.this, "Success.",
                                     Toast.LENGTH_SHORT).show();
-                            //TODO go to main page
+                            Intent intent  = new Intent(signIn.this,MAIN_APP.class);
+                            startActivity(intent);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(null, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(com.example.project.SignIn.this, "The email or password you entered is incorrect.",
+                            Toast.makeText(com.example.project.signIn.this, "The email or password you entered is incorrect.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
